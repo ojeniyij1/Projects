@@ -33,6 +33,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		porfolio.classList.toggle('fullPane');
 		toggleCloseBtn.classList.toggle("fa-close");
 	}
+
+    const name = document.getElementById('name');
+    
+    const form = document.getElementById('form');
+    const errorElement = document.getElementById('error');
+
+    function validate() {
+        const email = document.getElementById('email').value;
+        var pattern = /^([a-zA-Z0-9\._]+)@([a-zAA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+
+        if(pattern.text(email)) {
+            alert('Thank you for submitting your email I will get back to you shortly')
+            return true
+        }
+        else{
+            alert('Please provide a email in the correct format')
+            return false;
+        }
+    }
+   
+
+    form.addEventListener('submit', (e) => {
+        let messages = []
+        if (email.value === '' || email.value == null) {
+            messages.push("Email is required")
+        }
+
+        if (email.value)
+
+        if (messages.length > 0) {
+        e.preventDefault()
+        errorElement.innetText = messages.join, ','
+        }
+    })
 });
 	</script>
 	<style>
@@ -58,9 +92,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
   height: 100vh;
   width: 100%;
    /*background-image: url("https://i.imgur.com/ln0ypIq.jpeg");*/
-  background: #f9c10f;
+  background: linear-gradient(45deg, #f9c10f91 35%, #00000038 35%) , url(https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4000&q=80);
   background-size: cover;
-  background-position: center;
+  
   transform: transition 0.3s ease-in ;
 }
 
@@ -91,7 +125,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: black;
+  color: #f9c10f;
   text-decoration: none;
   font-weight: bold;
   text-transform: capitalize;
@@ -267,7 +301,7 @@ button:hover {
 
 .box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   min-height: 400px;
 }
@@ -972,7 +1006,7 @@ i {
 
 		.nav a:hover {
 			/*background: #f1f3f7 /*#FFFF00*/
-			;
+			
 			color: #13D8F2;
 			box-shadow: inset 0px 10px 0px #ffe400;
 
@@ -1805,6 +1839,7 @@ playback timings (ms):
 			 J
 		   </h2>
 		   <ul>
+            <li></li>
 			 <li><a href='https://www.instagram.com/713sharpjim'><i class="fa-brands fa-instagram"></i></a></li>
 			 <li> <a href='https://www.facebook.com/jojeniyi'><i class="fa-brands fa-facebook-f"></i></a></li>
 			 <li> <a href='https://www.twitter.com/jojeniyi'><i class="fa-brands fa-twitter"></i></a></li>
@@ -1820,9 +1855,10 @@ playback timings (ms):
 		   <h3>I'm a UX/UI designer</h3>
 		   
 		   <div class='newsletter'>
-			   <form>
+               <div id="error"></div>
+			   <form id="form">
 				 <input type='email' name='email' id='email' placeholder='Enter Your Email'>
-				 <input type='submit' name='submit' value='Lets Start'>
+				 <input onclick="validate()" type='submit' name='submit' value='Lets Start'>
 			   </form>
 			</div>
 		</div>
@@ -1896,12 +1932,7 @@ I learned 3 programming languages in 2 years. and am currently learning PHP. I a
 				</div><a class="gal" target="_blank"
 					href="https://xd.adobe.com/view/0f817f39-6865-43cb-b047-3435f69abf70-5ad2">
 				</a>
-				<div id="post" class="col-4"><a class="gal" target="_blank"
-						href="https://xd.adobe.com/view/0f817f39-6865-43cb-b047-3435f69abf70-5ad2"></a><a class="gal"
-						target="_blank" href="https://hcfmo.net/">
-						<img src="images/Screen Shot 2022-06-09 at 12.15.38 PM.png"></a></div><a class="gal"
-					target="_blank" href="https://hcfmo.net/">
-				</a>
+				
 				<div id="post" class="col-4"><a class="gal" target="_blank" href="https://hcfmo.net/"></a><a class="gal"
 						target="_blank" href="https://atonementfriars.org">
 						<img src="images/atonementfriars.png"></a></div><a class="gal"
@@ -1928,14 +1959,6 @@ I learned 3 programming languages in 2 years. and am currently learning PHP. I a
 					<div id="post" class="col-4"><a class="gal" target="_blank"
 							href="https://codepen.io/jamesojeniyi/full/OJzqaEQ"><img
 								src="images/midi-program.png" /></a></div>
-
-					<div id="post" class="col-4"><a class="gal" target="_blank"
-						href="https://hcus.harriscountytx.gov/Service-Catalog"><img
-							src="images/hcus.png" /></a></div>
-
-					<div id="post" class="col-4"><a class="gal" target="_blank"
-						href="https://codepen.io/jamesojeniyi/full/OJzqaEQ"><img
-							src="images/hcus.png" /></a></div>
 
 			</div>
 		</div>
