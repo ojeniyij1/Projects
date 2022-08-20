@@ -1,0 +1,2046 @@
+
+<html>
+<title>James Ojeniyi- UX Designer and FrontEnd Developer</title>
+
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+
+  <meta charset "utf-8">
+  <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+  <script type="text/javascript"> 
+window.addEventListener('DOMContentLoaded', (event) => {
+	let btn = document.querySelector('#btn');
+	let sidebar = document.querySelector('.sidebar');
+	let searchBtn = document.querySelector('.fa-search');
+	var mainPane = document.querySelector('div.home_content');
+	var about = document.querySelector('section.about');
+	var service = document.querySelector('div.service');
+	var portfolio = document.querySelector('div.portfolio');
+
+	let toggleCloseBtn = document.querySelector('.fa-bars');
+
+	btn.onclick = function() 
+	{
+		sidebar.classList.toggle("active");
+		mainPane.classList.toggle("fullPane");
+		about.classList.toggle("fullPane");
+		service.classList.toggle("fullPane");
+		porfolio.classList.toggle('fullPane');
+		toggleCloseBtn.classList.toggle("fa-close");
+	}
+
+    const name = document.getElementById('name');
+    
+    const form = document.getElementById('form');
+    const errorElement = document.getElementById('error');
+
+    function validate() {
+        const email = document.getElementById('email').value;
+        var pattern = /^([a-zA-Z0-9\._]+)@([a-zAA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+
+        if(pattern.text(email)) {
+            alert('Thank you for submitting your email I will get back to you shortly')
+            return true
+        }
+        else{
+            alert('Please provide a email in the correct format')
+            return false;
+        }
+    }
+   
+
+    form.addEventListener('submit', (e) => {
+        let messages = []
+        if (email.value === '' || email.value == null) {
+            messages.push("Email is required")
+        }
+
+        if (email.value)
+
+        if (messages.length > 0) {
+        e.preventDefault()
+        errorElement.innetText = messages.join, ','
+        }
+    })
+});
+	</script>
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+		}
+
+		html {
+  overflow-x:hidden;
+  scroll-behavior: smooth !important;
+}
+
+.about , .service {
+  position:relative;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+   /*background-image: url("https://i.imgur.com/ln0ypIq.jpeg");*/
+  background: linear-gradient(45deg, #f9c10f91 35%, #00000038 35%) , url(https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4000&q=80);
+  background-size: cover;
+  
+  transform: transition 0.3s ease-in ;
+}
+
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.portfolio {
+  color: black;
+}
+
+.logo {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+}
+
+nav ul li a {
+  color: #f9c10f;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 22px;
+    
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  text-transform:uppercase;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: .4s all ease-in-out;
+}
+
+.btn:hover {
+   transform: scale(1.2);
+}
+
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  color: white;
+  margin: 20px 0px 20px;
+  font-size: 75px;
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+h4 {
+  color: black;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.newsletter form {
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+}
+
+.newsletter form input:first-child {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 130px 14px 15px;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 30px;
+}
+
+.newsletter form input:last-child {
+  position: absolute;
+  background-color: black;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: white;
+  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+  top: 6px;
+  right: 6px;
+}
+
+.about {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: black;
+  min-height: 100%;
+                /*width: calc(100% - 240px);*/
+                width:100%;
+                
+                /* Smooth Transition */
+                -webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+  }
+
+ .about img {
+    height: auto;
+    width: 430px;
+  }
+
+.about-text {
+  width: 550px;
+}
+
+.main {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-text h2 {
+  color: white;
+  font-size: 75px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.about-text h5 {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.about-text p {
+  color: #fcfc;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 15px;
+  margin-bottom: 45px;
+}
+
+button {
+  background-color: #f9c10f;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: transform .4s;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid #fc841e;
+}
+
+.service {
+  background: #f9c10f;
+  width: 100%;
+  padding: 100px;
+  
+                /*width: calc(100% - 240px);*/
+                width:100%;
+                
+                /* Smooth Transition */
+                -webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+}
+
+.title {
+  color: black;
+  font-size: 75px;
+  width: 1130px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 400px;
+}
+
+.card {
+  height: 365px;
+  width: 335px;
+  padding: 20px 35px;
+  background: black;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card i {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color: #f9c10f;
+}
+
+h5 {
+  color: white;
+  font-size: 23px;
+  margin-bottom 15px;
+}
+
+.pra p {
+  color: #fcfc;
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+
+.card .button {
+  background-color: #f9c10f;
+  color: black;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 9px 22px;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.card .button:hover {
+  background-color: transparent;
+  border: 2px solid #fc841e;
+  cursor: pointer;
+} 
+
+.contact-me {
+   width: 100%;
+  height: 290px;
+  background: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-me p {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.contact-me .button-two {
+  background-color: #f9c10f;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 9px 22px;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.contact-me .button-two:hover {
+  background: transparent;
+  border: 2px solid #fc841e;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+footer p:nth-child(1) {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+footer p:nth-child(2) {
+  font-size: 17px;
+  color: black;
+  width: 500px;  
+  text-align: center;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9c10f;
+  border-radius: 50%;
+  margin: 22px 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+.social a:hover {
+  transform: scale(1.3);
+  transition: .3s;
+}
+
+.end {
+  position: absolute;
+  color: black;
+  bottom: 35px;
+  font-size: 14px;
+}
+
+.sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 78px;
+                background: black;
+                padding: 6px 14px;
+                /* Transition */
+                -webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+z-index: 9999;
+            }
+
+            .sidebar.active {
+                width: 240px;
+            }
+
+            .sidebar .logo-content .logo {
+                color: #f9c10f;
+                display: flex;
+                height: 50px;
+                width: 100%;
+                align-items: center;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar.active .logo-content .logo {
+                opacity: 1;
+                pointer-events: none;
+            }
+
+            
+
+            .logo-content .logo i {
+                font-size: 28px;
+                margin-right: 5px;
+            }
+
+            .logo-content .logo .logo_name {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            .sidebar #btn {
+                position: absolute;
+                color: #f9c10f;
+                left: 50%;
+                top: 6px;
+                font-size: 20px;
+                height: 50px;
+                width: 50px;
+                text-align: center;
+                line-height: 50px;
+                transform: translateX(-50%);
+            }
+
+            .sidebar.active #btn {
+                left: 90%;
+            }
+
+            .sidebar ul {
+                margin-top: 20px;
+            }
+
+            .sidebar ul li {
+                position: relative; 
+                height: 50px;
+                width: 100%;
+                margin: 10px 0;
+                list-style: none;
+                line-height: 50px;
+                border-radius: 12px;
+
+            }
+
+            .sidebar ul li .tooltip {
+                position: absolute;
+                left: 122px;
+                top: 50%;
+                transform: translateY(-50%, -50%);
+                border-radius: 6px;
+                height: 35px;
+                width: 122px;
+                background: #fff;
+                line-height: 35px;
+                text-align: center;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+                transition: 0s;
+                opacity: 0;
+                pointer-events: none;
+                display: block;
+            }
+
+            .sidebar.active ul li .tooltip {
+               display: block;
+            }
+
+            .sidebar ul li:hover .tooltip {
+                transition: all 0.5s ease;
+                opacity: 1;
+                top: 50%;
+    
+            }
+
+            .fa-remove:before, .fa-close:before, .fa-times:before {
+                content: "\f00d" !important;
+            }
+
+
+            .sidebar ul li i {
+                height: 50px;
+                min-width: 50px;
+                border-radius: 12px;
+                line-height: 50px;
+                text-align: center;
+            }
+
+            .sidebar ul li input {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0; 
+                border-radius: 12px;
+                outline: none;
+                border: none;
+                background: #292727;
+                padding-left: 50px;
+                font-size: 18px;
+                color: #fff;
+            }
+
+            .sidebar ul li  .fa-search  {
+                position: absolute;
+                z-index: 99;
+                color: #f9c10f;
+                font-size: 22px;
+                transition: all 0.5 ease;
+            }
+
+            .sidebar ul li  .fa-search:hover  {
+                color:#1d1b31;
+                background: #fff;
+            }
+
+            .sidebar .profile_content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #fff;
+                width: 100%;
+                opacity: 0;
+
+            }
+
+            .sidebar.active .profile_content {
+                opacity: 1;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #f9c10f;
+                width: 100%;
+            }
+
+            .sidebar .links_name {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .sidebar.active .links_name {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .sidebar.active .profile_content .profile {
+                position: relative;
+                padding: 10px 6px;
+                height: 60px;
+                background: #292727;
+                
+            }
+
+            .profile_content .profile .profile_details {
+                display: flex;
+                align-items: center;
+                opacity: 1;
+            }
+
+            .profile .profile_details img {
+                height: 45px;
+                width: 45px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+            .profile .profile_details .name_job {
+                margin-left: 10px;
+            }
+
+            .profile .profile_details .name {
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+            .profile .profile_details .job {
+                font-size: 12px;
+            }
+
+            .profile #log-out {
+                position: absolute;
+                left: 88%;
+                bottom: 5px;
+                transform: translateX(-50%);
+                min-width: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                border-radius: 12px;
+            }
+
+            .home_content {
+                
+position: absolute;
+                height: 100%;
+                /*width: calc(100% - 240px);*/
+                width:100%;
+                padding:1.5em;
+                left: 78px;
+                /* Smooth Transition */
+                -webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+            }
+
+            .home_content .text {
+              margin: 12px;
+            }
+
+          /*  .fullPane {
+                left:240px;
+            } */
+
+a , button {
+  
+  font-weight:800 !important;
+  text-transform:uppercase !important;
+                  -webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+  cursor:pointer;
+}
+
+
+a:hover , button:hover {
+  color:white !important;
+}
+
+i {
+ cursor:pointer !important; 
+}
+
+.sidebar ul li a {
+                color: #f9c10f !important;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                transition: all 0.4s ease;
+                border-radius: 12px;
+                white-space: nowrap;
+            }
+
+            .sidebar ul li a:hover {
+                color: #11101d !important;
+                background: #fff;
+            }
+
+
+		/*GRID LAYOUT*/
+
+		.col-1 {
+			width: 8.33%;
+		}
+
+		.col-2 {
+			width: 16.66%;
+		}
+
+		.col-3 {
+			width: 25%;
+		}
+
+		.col-4 {
+			width: 33.33%;
+		}
+
+		.col-5 {
+			width: 41.66%;
+		}
+
+		.col-6 {
+			width: 50%;
+		}
+
+		.col-7 {
+			width: 58.33%;
+		}
+
+		.col-8 {
+			width: 66.66%;
+		}
+
+		.col-9 {
+			width: 75%;
+		}
+
+		.col-10 {
+			width: 83.33%;
+		}
+
+		.col-11 {
+			width: 91.66%;
+		}
+
+		.col-12 {
+			width: 100%;
+		}
+
+		[class*="col-"] {
+			/*float:left;*/
+			padding: 15px;
+			/*border: 1px solid red;*/
+		}
+
+		html {
+			background: aliceblue;
+		}
+
+		.row {
+			background: aliceblue;
+		}
+
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		video {
+			max-width: 100%;
+			height: auto;
+		}
+
+		html {
+			padding: 0;
+			height: 100%;
+			background: aliceblue;
+			/*#F1F4F5*/
+			;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		@font-face {
+			font-family: "My Custom Font";
+			src: url(https://web.archive.org/web/20220304061725im_/http://www.example.org/mycustomfont.ttf) format("truetype");
+		}
+
+		#divider {
+			width: auto;
+			height: 7px;
+			background: url("/web/20220304061725im_/http://tyrantpixels.com/box.png");
+			display: block;
+			-webkit-animation: slide 15s linear infinite;
+		}
+
+		body {
+			margin: 0 auto;
+			background: aliceblue;
+			overflow: auto;
+			width: auto;
+			/*min-width:1280px;*/
+			min-height: 100%;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 600;
+			letter-spacing: -0.035em;
+		}
+
+
+		header {
+			/*width:1280px;*/
+			max-width: 1280px;
+			width: auto;
+			height: 125px;
+			margin: 0 auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 999;
+			display: block;
+			position: fixed;
+			/*background:#4D3689;*/
+			background: linear-gradient(to left, #278CF2, #27B5F2, #33DED5);
+			/*background: linear-gradient(to bottom, #363363 , #4D3689);*/
+			/*box-shadow:inset 0px -5px 25px rgba(0,106,217,255,.25) , inset 0px 5px 25px rgba(0,106,217,255,.25);*/
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+			background: transparent;
+			/* #f4f7f6;*/
+		}
+
+		header:hover {
+			box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.035);
+			/*transform: perspective(75em) rotateX(5deg);*/
+		}
+
+		.wrapper_container {
+			max-width: 1280px;
+			margin: 0 auto;
+			width: auto;
+			background: aliceblue;
+			position: relative;
+			display: block;
+		}
+
+		.navbar-fixed {
+			top: 0;
+			z-index: 100;
+			position: fixed;
+			margin-top: -5px;
+			background: white;
+		}
+
+		.navfix {
+			color: green;
+			background: #1d64e3;
+			background: linear-gradient(to top left, #4c38c2, #3e78e6);
+		}
+
+		.navigation {
+			height: 125px;
+			width: 50%;
+			display: block;
+			float: left;
+			padding: 0;
+			/*background:#272437;*/
+		}
+
+		.left_logo {
+			height: 125px;
+			margin: 0;
+			padding: 0;
+			float: left;
+			width: 50%;
+			display: block;
+			background: transparent;
+			/*box-shadow:inset -5px 0px 2px #ededed;*/
+		}
+
+		.logo {
+			width: 75px
+				/*135px*/
+			;
+			height: auto;
+			max-width: 100%;
+			display: block;
+			margin-top: 20px;
+			margin-left: 30px;
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+		}
+
+		.logo:hover {
+			margin-top: 30px;
+			cursor: pointer;
+		}
+
+		.nav ul {
+			list-style-type: none;
+			padding: 0;
+			text-align: right;
+			margin: 0;
+		}
+
+		#main_content {
+			width: auto;
+			display: block;
+			min-height: 120px;
+			height: auto;
+		}
+
+		.nav li {
+			display: inline-block;
+			height: 30px;
+			font-size: 0.95em;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		.nav a {
+			text-decoration: none;
+			display: block;
+			width: auto;
+			/*border-right:1px solid #e5e5e5;*/
+			text-align: center;
+			font-weight: 700;
+			padding-top: 50px;
+			padding-right: 25px;
+			padding-left: 25px;
+			color: white;
+			/*//#EB2A9A grey = 576783*/
+			;
+			text-transform: uppercase;
+			height: 125px;
+			margin-left: -4px;
+			background: none;
+			-webkit-transition: all 0.22s ease-in-out;
+			-moz-transition: all 0.22s ease-in-out;
+			-o-transition: all 0.22s ease-in-out;
+			transition: all 0.22s ease-in-out;
+		}
+
+		/*.nav a {
+	text-decoration:none;
+	display:block;
+	width:auto;
+	border-right:1px solid rgba(255,255,255,0.225) #ededed;
+	text-align: center;
+	padding:8px 25px;
+	margin-left:-2px;
+	margin-right:15px;
+	margin-top:25px;
+	font-weight:600;
+	color:#EB2A9A;  //#EB2A9A;
+	text-transform: uppercase;
+	border-radius:25px;
+	-webkit-transition: all 0.22s ease-in-out;
+	-moz-transition: all 0.22s ease-in-out;
+	-o-transition: all 0.22s ease-in-out;
+	transition: all 0.22s ease-in-out;
+}*/
+
+		.nav a:hover {
+			/*background: #f1f3f7 /*#FFFF00*/
+			
+			color: #13D8F2;
+			box-shadow: inset 0px 10px 0px #ffe400;
+
+		}
+
+		#featureImage {
+			background: white;
+		}
+
+		.feature {
+			height: 110vh;
+			margin: 0;
+			padding: 0;
+			background-color: #f6f9fc;
+			background: white;
+			display: block;
+			/*-webkit-animation: slide 35s linear infinite;*/
+			background-image: url("/web/20220304061725im_/http://tyrantpixels.com/bgimg5.png");
+			/*background:url("/web/20220304061725im_/http://tyrantpixels.com/bgimg.png"), linear-gradient(#D963A0, #F6B592);*/
+			text-align: center;
+			background-attachment: fixed;
+			z-index: 2;
+			background-repeat: no-repeat;
+			background-size: cover;
+			/*box-shadow:inset 0px -5px 25px rgba(0,0,0,0.05) , inset 0px 5px 25px rgba(0,0,0,0.05);*/
+			/*clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 6vw)
+  );*/
+		}
+
+		.feature::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 110vh
+				/*630px*/
+			;
+			top: 0px;
+			/*margin-top:90px;*/
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: .85;
+			background-image: linear-gradient(to bottom right, #633CD6, #33DED5);
+			*/
+			/*background-image: linear-gradient(to right, #383AD6 , #F50C79);*/
+			/*background-image: linear-gradient(to right, #633CD6 , #33DED5);*/
+			/*background:rgba(0,0,0,0.85);*/
+			/*clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 6vw)
+  );*/
+		}
+
+		@-webkit-keyframes slide {
+			from {
+				background-position: 0px;
+			}
+
+			to {
+				background-position: 1440px;
+			}
+		}
+
+		.feature span {
+			width: auto;
+			height: auto;
+			margin: 0 auto;
+			display: inline-block;
+			top: 35%;
+			position: relative;
+			vertical-align: baseline;
+		}
+
+		span img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		#media {
+			list-style-type: none;
+			margin: 0 auto;
+			margin-top: 85px;
+			width: 100%;
+			display: block;
+			overflow: hidden;
+			text-align: center;
+			/* transform: skewY(-3deg);*/
+		}
+
+		.dividerOne {
+			background: ;
+			width: auto;
+			display: block;
+		}
+
+		#media li {
+			margin-right: .5em;
+			margin-left: .5em;
+			display: inline-block;
+		}
+
+		
+
+		
+		.portfolio {
+			width: auto;
+			/*border-top: 1px solid #e8e8e8;*/
+			/*box-shadow: inset 0px 2px 0px rgba(0,0,0,0.025);*/
+			min-height: 1050px;
+			height: auto;
+			padding-top: 15px;
+			padding-bottom: 85px;
+			background-color: aliceblue;
+			/*#32349C; #f7f7f7;*/
+			/*    clip-path: polygon(
+    0 0,
+    100% 0
+,    100% 100%,
+    0 calc(100% - 6vw)
+  );*/
+		}
+
+		.tier2 {
+			width: auto;
+			height: 325px;
+			/*-webkit-animation: slide 35s linear infinite;*/
+			box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.95);
+			background-image: url("/web/20220304061725im_/http://tyrantpixels.com/bgimg3.png");
+			text-align: center;
+			background-attachment: fixed;
+			transform: rotateX(10deg);
+		}
+
+		.tier2::before {
+			position: absolute;
+			content: "";
+			display: block;
+			overflow: auto;
+			width: 100%;
+			height: 325px;
+			opacity: 0.90;
+			background-image: linear-gradient(to right, #383AD6, #F50C79);
+			/*background-image: linear-gradient(to left, #33DED5 , #633CD6);*/
+		}
+
+		.def {
+			text-decoration: none;
+			text-align: center;
+			font-size: 1.55em;
+			color: white;
+			font-weight: 600;
+			background: rgba(0, 0, 0, 0.85);
+			display: block;
+			padding: 8px;
+			margin: 2.5em auto;
+			text-transform: uppercase;
+			webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+			border: 5px solid transparent;
+			box-sizing: border-box;
+		}
+
+
+
+		.def:hover {
+			margin-top: 3.85em;
+			transform: perspective(25em) rotateX(10deg);
+			background: transparent;
+			border: 5px solid white;
+			overflow: hidden;
+		}
+
+		.feature_list {
+			list-style-type: none;
+			text-decoration: none;
+			padding: 0;
+			margin: 0 auto;
+			display: block;
+			text-align: center;
+		}
+
+		.feature_list li {
+			/*margin-right:0.75em;
+	margin-left:0.75em;*/
+			margin-top: 15px;
+			/*float:left;*/
+			background: white;
+			display: inline-block;
+
+		}
+
+		.listblock {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #4c52b1;
+			font-weight: bold;
+			width: auto;
+			float: left;
+			display: block;
+			background: yellow;
+			text-shadow: 1px 2px 1.5px #FFF;
+			padding: 0.75em;
+			border-radius: 2px;
+			vertical-align: top;
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+		}
+
+		.listblock:hover {
+			margin-top: -3px;
+			color: black;
+			background: linear-gradient(to left, yellow, #fff500);
+			box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.065);
+		}
+
+		.listblock:active {
+			margin-top: 2px;
+			background: #fff500;
+			box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.065);
+		}
+
+		#container {
+			width: 100%;
+			margin: 2em auto;
+			flex-wrap: wrap;
+			column-count: 3;
+			column-gap: 0;
+		}
+
+		.cols {
+			-webkit-column-count: 3;
+			-webkit-column-gap: 3%;
+			-webkit-column-width: 30%;
+			column-count: 3;
+			column-gap: 3%;
+			margin: 0;
+			padding: 0;
+			column-width: 30%;
+		}
+
+		#post {
+			position: relative;
+			padding: 0;
+			display: block;
+			width: auto;
+			text-align: center;
+			margin: 10px;
+		}
+
+		#post img {
+			display: block;
+			margin: 0 auto;
+			border-radius: 10px;
+			/*width: calc(1280px/4);*/
+			transition: .1s transform ease-in-out;
+			transform: translateZ(0);
+			box-shadow: 0 0 25px transparent;
+		}
+
+		#post:hover {
+			z-index: 1;
+		}
+
+		#post:hover>.gal img:hover {
+			transform: scale(1.025);
+			transition: .3s transform ease-in-out;
+			box-shadow: 0 0 25px rgba(145, 187, 255, 0.375);
+			cursor: pointer;
+		}
+
+		input[type=checkbox] {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+			display: none;
+		}
+
+		input[type=checkbox]:checked~.fullimg {
+			width: 100%;
+			height: 100%;
+			background-image: url("/web/20220304061725im_/http://tyrantpixels.com/butterfly2.png");
+			display: inline-block;
+			background-size: cover;
+		}
+
+
+		.fullimg img {
+			position: relative;
+			margin: 1.75em auto;
+			display: block;
+		}
+
+		.box {
+			margin-bottom: 20px;
+			padding: 0px;
+		}
+
+		.box:hover {}
+
+		.box.one {
+			height: 200px;
+			background-color: #d77575;
+			background-image: url("/web/20220304061725im_/http://tyrantpixels.com/img2.jpg");
+			background-size: cover;
+		}
+
+		.box.two {
+			height: 555px;
+			background-color: #dcbc4c;
+			background-image: url("/web/20220304061725im_/http://tyrantpixels.com/img1.jpg");
+			background-size: cover;
+		}
+
+		.box.three {
+			background-color: #a3ca3b;
+			height: 300px;
+			background-image: url("https://web.archive.org/web/20220304061725im_/http://pixelpier.com/aaliyah2.png");
+			background-size: cover;
+		}
+
+		.box.four {
+			background-color: #3daee3;
+			background-image: url("https://web.archive.org/web/20220304061725im_/http://pixelpier.com/tradfence.png");
+			height: 605px;
+			background-size: cover;
+		}
+
+		.box.five {
+			background-color: #bb8ed8;
+			height: 500px;
+			background-image: url("https://web.archive.org/web/20220304061725im_/http://pixelpier.com/manip2.png");
+			background-size: cover;
+		}
+
+		.box.six {
+			background-color: #baafb1;
+			height: 300px;
+			background-image: url("https://web.archive.org/web/20220304061725im_/http://pixelpier.com/dust2.png");
+			background-size: cover;
+		}
+
+		.box:hover {
+			color: black;
+			cursor: pointer;
+		}
+
+		/*.box a {
+	text-align:center;
+	text-decoration: none;
+	margin: 0 auto;
+	vertical-align: middle;
+	font-size:20px;
+	width:100%;
+	display:block;
+	color:white;
+	height:100%;
+	background-image:url("/web/20220304061725im_/http://tyrantpixels.com/bgimg5.png");
+	background-size: cover;
+}*/
+
+		.tier3 {
+			width: auto;
+			min-height: 500px;
+			height: auto;
+			position: relative;
+			z-index: 53;
+			margin-top: -4px;
+			text-align: center;
+			background: #eaeff8;
+			/*#eaeff8;*/
+			/*F0F4F5*/
+			/*box-shadow: inset 0px 15px 75px #7da5ec;*/
+		}
+
+
+		.processbox {
+			display: inline-block;
+			height: 525px;
+			width: 400px;
+			text-align: center;
+			background: ;
+			z-index: 9999;
+			position: relative;
+			margin-top: 45pt;
+			/*box-shadow:0px 5px 15px rgba(0,0,0,0.05);*/
+			-webkit-transition: 0.2s all ease-in-out;
+			-moz-transition: 0.2s all ease-in-out;
+			-o-transition: 0.2s all ease-in-out;
+			transition: 0.2s all ease-in-out;
+		}
+
+		.processbox:hover {
+			box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.075);
+			/*        -webkit-transform: scale(1.05) skewY(-3deg);
+        -ms-transform: scale(1.05) skewY(-3deg); */
+			background: white;
+			/*transform: scale(1.05) skewY(-3deg);*/
+		}
+
+		/*.processbox:hover::before {
+	background-image: linear-gradient(251deg,rgba(135,187,253,.77) 3%,rgba(98,207,245,0));
+    top: 0;
+    width:100%;
+    height:85px;
+    right: calc(50% + 300px);
+    position:absolute;
+    display:block;
+    content:"";
+    transform: skewY(3deg);
+    overflow:hidden;
+}*/
+
+		.processbox h2 {
+			color: #1d64e3;
+			font-size: 22pt;
+			margin-top: 35pt;
+			display: block;
+		}
+
+		.processbox::before {
+			content: "";
+			box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.075);
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			position: relative;
+			border-radius: 100%;
+			background: white;
+			margin-top: -35px;
+			text-align: center;
+		}
+
+		.processbox p {
+			color: #7860b5;
+			font-weight: 200;
+			text-align: center;
+			padding: 35pt;
+			background: ;
+			font-size: 14pt;
+			display: block;
+			line-height: 35px;
+		}
+
+		.tier4 {
+			width: auto;
+			display: block;
+			position: relative;
+			height: 750px;
+			z-index: 51;
+			/*max-height:auto;*/
+		}
+
+		.leftPanel {
+			width: 50%;
+			display: block;
+			height: 100%;
+			float: left;
+			background-size: cover;
+			background-image: url("/web/20220304061725im_/http://tyrantpixels.com/bgimg5.png");
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+		}
+
+		.leftPanel::before {
+			background-color: #4c38c2;
+			content: '';
+			width: 50%;
+			position: absolute;
+			display: block;
+			height: 750px;
+			top: 0px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: .75;
+		}
+
+
+
+		.rightPanel {
+			width: 50%;
+			display: block;
+			height: auto;
+			/*min-height:100%;
+	max-height:auto;*/
+			z-index: 9999;
+			position: relative;
+			float: left;
+			background: white;
+		}
+
+		.rightPanel p {
+			text-align: left;
+			color: #195fa7;
+			font-weight: 200;
+			height: auto;
+			padding-right: 2.5em;
+			margin-left: 55px;
+			padding-bottom: 5.75em;
+			font-size: 1.065em;
+			line-height: 45px;
+		}
+
+		.rightPanel h2 {
+			text-align: left;
+			color: #ff0066;
+			margin-top: 85px;
+			font-weight: 700;
+			margin-left: 55px;
+			text-transform: uppercase;
+			padding-top: 2.05em;
+			padding-bottom: 0.5em;
+			padding-right: 2.5em;
+			font-size: 20pt;
+		}
+
+		.callcontainer {
+			width: 100%;
+			background: #eaeff8;
+			/*#F0F4F5;*/
+			height: auto;
+			min-height: 425px;
+			opacity: 1;
+			z-index: 53;
+			display: inline-block;
+			position: relative;
+			/*background-image:url("/web/20220304061725im_/http://tyrantpixels.com/bg.png");*/
+			text-align: center;
+			-webkit-animation: slide 35s linear infinite;
+			/*box-shadow: inset 0px 15px 75px #7da5ec;*/
+		}
+
+		.callcontainer h2,
+		form {
+		}
+
+		
+		form {
+			display: block;
+			width: auto;
+			position: relative;
+			max-height: auto;
+		}
+
+		#email:focus {
+			outline: none;
+			background: #f9f9fa;
+		}
+
+		#email:hover {
+			box-shadow: 0px 5px 5px rgba(76, 56, 194, 0.095), 0px 5px 25px #bad0ee, inset 3px 0px 0px #4653d1;
+		}
+
+		button[type="submit"],
+		#submit {
+			width: auto;
+			max-width: 350px;
+			height: 81px;
+			color: white;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 24px;
+			border: none;
+			padding: 20px;
+			display: block;
+			text-decoration: none;
+			position: relative;
+			cursor: pointer;
+			margin: 75px auto;
+			background: linear-gradient(to top left, #4c38c2, #3e78e6);
+			-webkit-transition: 0.15s all ease-in-out;
+			-moz-transition: 0.15s all ease-in-out;
+			-o-transition: 0.15s all ease-in-out;
+			transition: 0.15s all ease-in-out;
+		}
+
+		button[type="submit"]:focus,
+		:target,
+		#submit:focus,
+		#submit:target {
+			outline: none;
+			border: none;
+		}
+
+		button[type="submit"]:hover,
+		#submit:hover {
+			box-shadow: 0px -6px 5px rgba(0, 0, 0, 0.175);
+		}
+
+		button[type="submit"]:active,
+		#submit:active {
+			transform: scale(1.05);
+		}
+
+		.callcontainer h2 {
+			text-transform: uppercase;
+			color: #ff0066;
+			margin-top: 75px;
+			background: ;
+			font-weight: bold;
+			font-size: 20pt;
+			display: inline-block;
+			text-align: left;
+			/*text-shadow: 0px 3px 6px #a6beea;*/
+		}
+
+		.callcontainer h2::before {
+			width: 90px;
+			background: white;
+			height: 10px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+			margin-top: -20px;
+			position: absolute;
+			content: "";
+		}
+
+		.foot {
+			width: auto;
+			height: 325px;
+			background: white;
+			/*background: linear-gradient(to left, #4c38c2, #3e78e6);*/
+		}
+
+		/*https://jsfiddle.net/gabrieleromanato/tQANc/*/
+
+		@media only screen and (max-width: 1200px) {
+
+			/* For mobile phones: */
+			[class*="col-"] {
+				width: 100%;
+			}
+
+			#container {
+				column-count: 2;
+			}
+
+			.processbox {
+				height: auto;
+				margin: 0;
+			}
+
+			.about {
+				background-color: aliceblue;
+			}
+
+			.processbox:hover {
+				box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.025);
+			}
+
+			.processbox h2:hover {
+				color: #ff0066;
+			}
+
+			.left_logo {
+				display: none;
+			}
+
+			.nav ul {
+				text-align: center;
+				margin: 0 auto;
+			}
+
+			.nav a {
+				margin: 0;
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+
+		@media only screen and (max-width: 700px) {
+
+			#container {
+				column-count: 1;
+			}
+
+		}
+
+		/*@media only screen and (max-width: 768px) {
+  .col-1 {z
+    width: 100%;
+  }
+  .col-2 {
+    width: calc(100% / 2);
+  }
+  .col-3 {
+    width: calc(100% / 3);
+  }
+  .one-fourth {
+    width: calc(100% / 4);
+  }
+  .two-thirds {
+    width: calc(100% / 3 * 2);
+  }
+  .column {
+    float: left;
+  }
+}*/
+		/*
+     FILE ARCHIVED ON 06:17:25 Mar 04, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:47:51 Jun 06, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+		/*
+playback timings (ms):
+  captures_list: 89.264
+  exclusion.robots: 0.387
+  exclusion.robots.policy: 0.373
+  RedisCDXSource: 0.871
+  esindex: 0.015
+  LoadShardBlock: 69.431 (3)
+  PetaboxLoader3.datanode: 44.572 (4)
+  CDXLines.iter: 16.116 (3)
+  load_resource: 74.741
+  PetaboxLoader3.resolve: 35.279
+*/
+	</style>
+
+</head>
+
+<body>
+
+
+<div id="dashboard" class='hero'>
+
+
+	<div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                
+                <div class='logo_name' style='font-family: Fascinate Inline'>
+                    J
+                </div>
+                </div>
+                <i class="fa fa-bars" id="btn" aria-hidden="true"></i>
+                <ul class="navlist">
+                   
+                    <li>
+                        <a href="#dashboard">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                            <span class="links_name">Dashboard</span>
+                        </a>
+                        <!--<span class="tooltip">Dashboard</span> -->
+                    </li>
+                    <li>
+                        <a href="#about">
+							<i class="fa-solid fa-circle-user"></i>
+                            <span class="links_name">About Me</span>
+                        </a>
+                       <!-- <span class="tooltip">About Me</span> -->
+                    </li>
+                    <li>
+                        <a href="#portfolio">
+                            <i class="fa-solid fa-suitcase"></i>
+                            <span class="links_name">Portfolio</span>
+                        </a>
+                       <!-- <span class="tooltip">Portfolio</span> -->
+                    </li>
+                    <!--<li>
+                        <a href="#skills">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                            <span class="links_name">Skills</span>
+                        </a>
+                       <!-- <span class="tooltip">Dashboard</span>
+                    </li>-->
+                    <li>
+                        <a href="#services">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="links_name">Services</span>
+                        </a>
+                       <!-- <span class="tooltip">Services</span> -->
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="links_name">Contact Me</span>
+                        </a>
+                       <!-- <span class="tooltip">Contact Me</span> -->
+                    </li>
+                    <!--<li>
+                        <a href="#">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                            <span class="links_name">Saved</span>
+                        </a>
+                       <!-- <span class="tooltip">Dashboard</span> 
+                    </li>-->
+                   <!-- <li>
+                        <a href="#">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                            <span class="links_name">Settings</span>
+                        </a>
+                       <!-- <span class="tooltip">Dashboard</span>
+                    </li>-->
+                </ul>
+                <div class="profile_content">
+                    <div class="profile">
+                        <div class="profile_details">
+                           <!--<img src="profile" >--> 
+            <div class="name_job">
+                <div class="name">James Ojeniyi</div>
+                <div class="job">UI/UI Designer</div>
+            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+<div class="home_content">
+	<div class="text"><nav>
+		   <h2 style='font-family: Fascinate Inline;'>
+			 J
+		   </h2>
+		   <ul>
+            <li></li>
+			 <li><a href='https://www.instagram.com/713sharpjim'><i class="fa-brands fa-instagram"></i></a></li>
+			 <li> <a href='https://www.facebook.com/jojeniyi'><i class="fa-brands fa-facebook-f"></i></a></li>
+			 <li> <a href='https://www.twitter.com/jojeniyi'><i class="fa-brands fa-twitter"></i></a></li>
+			 
+			  
+		   </ul>
+		  
+		 </nav>
+		   
+	    <div class='content'>
+		   <h4>Hello, my name is</h4>
+		   <h1>James Ojeniyi</h1>
+		   <h3>I'm a UX/UI designer</h3>
+		   
+		   <div class='newsletter'>
+               <div id="error"></div>
+			   <!--<form id="form">
+				 <input type='email' name='email' id='email' placeholder='Enter Your Email'>
+				 <input onclick="validate()" type='submit' name='submit' value='Lets Start'>
+			   </form>-->
+               <a>Cisco Systems Case Study</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+</div>
+
+<section id="about" class="about">
+    <div class="main">
+        <img src="https://i.imgur.com/bx11IcE.jpeg">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h5>Developer & Designer</h5>
+            <p>I'm a UX/UI developer and designer interested in designing and coding the best user experience possible. To me, UX/UI is more than just a career. It is the very thing that the current world functions on right now. I am proficient in HTML, CSS, and Javascript. In 2013, I gained experience in troubleshooting and coding for Velocious Delivery and started working with Adobe Photoshop, creating mockups and graphic art.
+ <br />
+My passions include design, coding, crypto, fashion, music. I value hard work and creativity. I love the brainstorming process and all the potential ideas that come to fruition. I also have a very keen eye for details. I love the overall work process in building user interface and user design.
+<br />
+I learned 3 programming languages in 2 years. and am currently learning PHP. I am also a citizen of 3 countries. In addition to programming, I have experience as a graphic designer. I work around the clock, but I do my best work from 6 am to 6 pm. For me personally, web development is more of an art. I see myself and my team as artists creating an ever-evolving interface for the world to function on. I have certifications in MS Office and AWS. In 2010, I graduated from Strake Jesuit College Preporatory. I am also an Alumni of the Duke Talent program and NHS.
+</p>
+            <button type="button">Let's talk</button>
+        </div>
+    </div>
+</section>
+
+
+
+	
+<section id="main_content" class="james-main">
+
+	<div class="row">
+
+	</div>
+	<div class="portfolio" id="portfolio">
+		<div class="wrapper_container">
+			<div class="col-12" id="container">
+
+				<div id="post" class="col-4">
+					<a class="gal" target="_blank" href="images/cisco_mockup3-1.png">
+						<img src="images/cisco_mockup3-1.png"></a>
+				</div><a class="gal" target="_blank" href="images/cisco_mockup3-1.png">
+				</a>
+				<div id="post" class="col-4"><a class="gal" target="_blank"
+						href="https://web.archive.org/web/20211228112202/http://portal1.tyrantpixels.com/maindashboard.html"></a><a
+						class="gal" target="_blank" href="images/cisco_mockup4-1.png">
+						<img src="images/cisco_mockup4-1.png"></a></div><a class="gal" target="_blank"
+					href="https://web.archive.org/web/20211228112202/http://portal1.tyrantpixels.com/indexalt.html">
+				</a>
+				<div id="post" class="col-4"><a class="gal" target="_blank"
+						href="https://web.archive.org/web/20211228112202/http://portal1.tyrantpixels.com/indexalt.html"></a><a
+						class="gal" target="_blank" href="images/cisco_mockup5.png">
+						<img src="images/cisco_mockup5.png"></a></div><a class="gal" target="_blank" href="30news.jpg">
+
+				</a>
+				<div id="post" class="col-4"><a class="gal" target="_blank" href="30news.jpg"></a><a class="gal"
+						target="_blank" href="images/cisco_mockup6.png">
+						<img src="images/cisco_mockup6.png"></a></div><a
+					class="gal" target="_blank"
+					href="https://web.archive.org/web/20211228112202/http://traditionsfence.com/">
+				</a>
+				<div id="post" class="col-4"><a class="gal" target="_blank"
+						href="https://web.archive.org/web/20211228112202/http://traditionsfence.com/"></a><a class="gal"
+						target="_blank" href="images/cisco_mockup7.png">
+						<img src="images/cisco_mockup7.png"></a></div><a
+					class="gal" target="_blank"
+					href="https://web.archive.org/web/20211228112202/http://portal1.tyrantpixels.com/dashboard.html">
+				</a>
+				<!--<div id="post" class="col-4"><a class="gal" target="_blank"
+						href="https://xd.adobe.com/view/0f817f39-6865-43cb-b047-3435f69abf70-5ad2">
+						<img src="https://web.archive.org/web/20211228112202im_/http://tyrantpixels.com/img-port3.jpg"></a>
+				</div><a class="gal" target="_blank"
+					href="https://xd.adobe.com/view/0f817f39-6865-43cb-b047-3435f69abf70-5ad2">
+				</a>-->
+				
+				<div id="post" class="col-4"><a class="gal" target="_blank" href="https://hcfmo.net/"></a><a class="gal"
+						target="_blank" href="https://atonementfriars.org">
+						<img src="images/atonementfriars.png"></a>
+                </div>
+                
+                <a class="gal"
+					target="_blank" href="https://web.archive.org/web/20211228112202/https://www.harrishelps311.org/">
+				</a>
+
+
+			<!--<div id="post" class="col-4"><a class="gal" target="_blank" href="https://atonementfriars.org"></a><a
+						class="gal" target="_blank" href="https://codepen.io/jamesojeniyi/full/YzejayW">
+						<img src="images/email2.png"></a>
+                </div>-->
+                        
+                        <a class="gal" target="_blank"
+					href="https://codepen.io/tlawson/full/oNgyGbv"></a>
+
+
+			<!--<div id="post" class="col-4"><a class="gal" target="_blank"
+						href="https://codepen.io/jamesojeniyi/full/OJQwZaK">
+						<img src="images/email3.png" /></a>
+				</div>
+					<div id="post" class="col-4"><a class="gal" target="_blank" 
+						href="https://couragerc.org/">
+						<img src="images/couragerc.png" /></a></div>
+
+					<div id="post" class="col-4"><a class="gal" target="_blank"
+							href="https://hcus.harriscountytx.gov/Service-Catalog"><img
+								src="images/hcus-site.png" /></a></div>-->
+
+					<div id="post" class="col-4"><a class="gal" target="_blank"
+							href="https://codepen.io/jamesojeniyi/full/OJzqaEQ"><img
+								src="images/midi-program.png" /></a>
+                    </div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="services" class='service'>
+    <div class='title'>
+      <h2>My Services</h2>
+    </div>
+ 
+  <div class='box'>
+    <div class='card'>
+	  <i class="fa-solid fa-computer"></i>
+      <h5>Frontend Development </h5>
+      <div class='pra'>
+        <p>
+          Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.
+        </p>
+        <!--<p style="text-align: center;">
+          <a class='button' href='#'>Read More</a>
+        </p>-->
+      </div>
+    </div>
+    
+    <div class='card'>
+		<i class="fa-solid fa-pen-ruler"></i>
+      <h5>UI/UX</h5>
+      <div class='pra'>
+        <p>
+			Two things that will guarantee the best user experience: looks and functionality. You want your website to be up to par in both departments.
+
+        </p>
+        <!--<p style="text-align: center;">
+          <a class='button' href='#'>Read More</a>
+        </p>-->
+      </div>
+    </div>
+    
+    <div class='card'>
+	<i class="fa-brands fa-aws"></i>
+      <h5>AWS </h5>
+      <div class='pra'>
+        <p>
+			Well-versed in everything from data migration to hosting options for your business infrastructure on the cloud. 
+		</p>
+        <!--<p style="text-align: center;">
+          <a class='button' href='#'>Read More</a>
+        </p>-->
+      </div>
+    </div>
+  </div>
+    
+    <div id="contact" class='contact-me'>
+      <p>Let's get started on your website today</p>
+      <a class='button-two' href='#'>Hire Me</a>
+    </div>
+    
+    <footer>
+      <p>James Ojeniyi</p>
+      <p>For more HTML, CSS, and Javascript projects, email me at jamesojeniyi@gmail.com</p>
+      <div class='social'>
+        <a href='https://www.linkedin.com/jamesojeniyi'><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href='https://www.instagram.com/713sharpjim'><i class="fa-brands fa-instagram"></i></a>
+        <a href='https://www.facebook.com/jojeniyi'><i class="fa-brands fa-facebook-f"></i></a>
+         <a href='https://www.twitter.com/jojeniyi'><i class="fa-brands fa-twitter"></i></a>
+        
+      </div>
+      <p class='end'>Copyright by James Ojeniyi</p>
+    </footer>
+ 
+
+</body>
+</html>
