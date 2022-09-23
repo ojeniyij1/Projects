@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+  <style>
+    html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding:0;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navcontainer {
+    position: fixed !important;
+    z-index: 2;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.hero-section::before {
+  position:absolute;
+  top:0;
+  right:0;
+  content:"";
+  width:35%;
+  height:90%;
+  background:white;
+  display:block;
+  box-shadow:0 0 99px rgba(99,25,105,0.06);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.light-gradient {
+  background:linear-gradient(90deg, #f8f8f8 85%, white 67%);
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 10s linear infinite;
+}
+
+@-webkit-keyframes rotating--ccw {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.rotating--ccw {
+    -webkit-animation: rotating--ccw 10s linear infinite;
+}
+
+.menu {
+  justify-content: flex-end;
+}
+
+.menu a {
+text-transform: uppercase;
+    text-decoration: none;
+    margin: 25px;
+    padding: 5px;
+    display: inline-block;
+    color: #001195;
+    font-weight: 600;
+}
+
+.menu a:hover {
+  color:#006CFF;
+}
+
+.white {
+  background-color:#FFFFFF;
+}
+
+.lightBtn {
+    background: white;
+    padding: 12px;
+    color: #4C53F7;
+    font-weight: 600;
+    position: absolute;
+    display: inline-block;
+    border-radius: 10em;
+    bottom: 200px;
+    left: 180px;
+    cursor: pointer;
+    z-index: 3;
+    box-shadow:15px 15px 25px rgb(72 59 255 / 40%);
+}
+
+.lightBtn:hover {
+  background:black;
+  color:white; 
+}
+
+.darkBtn {
+    background: black;
+    padding: 5px;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 3;
+    top: 150px;
+    right: 230px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.flexboxh {
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.flexed {
+  display:flex;
+}
+
+.lefth {
+  flex: 0 0 41%;
+}
+
+.lefthcontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lefthcontainer h1 {
+  font-size:60px;
+  font-weight:300;
+  margin:0;
+}
+
+.lefthcontainer .wrapper {
+  overflow:hidden;
+  margin:0 !important;
+}
+
+.righth {
+    flex: 0 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.righth img {
+  border-radius:100%;
+  width:325px;
+  height:325px;
+  position:relative;
+}
+
+
+.lefth h2 {
+  color:#006CFF;
+  font-size: 22px;
+  font-weight: 300;
+  margin:0;
+}
+
+.purple {
+  background-color:#0F209D;
+}
+
+.row {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.wrapper {
+  max-width:1920px;
+  width:85%;
+  margin:0 auto;
+  position:relative;
+}
+
+.flexbox {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.services--boxes--container {
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  justify-content:space-between;
+}
+
+.services--boxes--container i {
+    color: #F7A278;
+    margin-right: 25px;
+    font-size: 2em;
+}
+
+.services--boxes--container .services--box p {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.services--boxes--container .services--box {
+    flex: 0 0 45%;
+    padding: 2.5em;
+    margin: 25px 0;
+    box-sizing: border-box;
+}
+
+.services--box.light {
+  background:white;
+  box-shadow:0 15px 40px rgb(215 226 239 / 50%);
+}
+
+.services--box.dark {
+  background:black;
+  border:1px solid black;
+}
+
+.services--box h2 {
+  font-weight:300;
+}
+
+.padding {
+  padding:7em 0;
+}
+
+.services--box.dark * {
+  color:white;
+}
+
+main {
+  width: 100%;
+  padding: 100px 0px;
+  background-color: white;
+  min-height: 100%;
+  /*width: calc(100% - 240px);*/
+}
+
+.about-me-container img {
+    height: auto;
+    width: 430px;
+  }
+
+.about-me-p {
+  width: 550px;
+}
+
+  .about-me-container {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  flex: 0 0 60%;
+}
+
+.left p {
+  color:white;
+  line-height:32px;
+  font-size:16px;
+}
+
+.left h2 {
+  color:white;
+  font-size:24px;
+  font-weight:300;
+}
+
+.right {
+  flex:0 0 40%;
+  text-align:center;
+}
+
+.right img {
+  border-radius:100%;
+  width:325px;
+  height:325px;
+  position:relative;
+}
+
+.wrapper .title .i-title-item {
+  height: 100%;
+  animation: move 7s ease-in-out alternate infinite;
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+  
+}
+
+.title {
+    height: 50px !important;
+    overflow: hidden;
+    background-color: #006CFF !important;
+    display: block;
+    padding: 0 15px;
+    margin: 15px 0;
+    border-radius: 10em;
+    max-width: fit-content;
+}
+
+   .i-title-item {
+    height: 50px !IMPORTANT;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    }
+
+.cardcontainer {
+  display: flex;
+  justify-content:space-around;
+}
+
+.cardpreview1 {
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.cardpreview2 {
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.cardpreview3 {
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.cardpreview4 {
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.cardcontainer .card {
+  min-height:500px;
+  border-radius:25px;
+}
+
+.card1 {
+  height: 300px;
+  background-image: url(https://i.imgur.com/uIksNdu.png);
+  background-size: ;
+}
+
+.card2 {
+  height: 300px;
+  background-image: url(https://i.imgur.com/P7Ifn2K.png);
+  background-size: cover;
+}
+
+.card3 {
+  height: 300px;
+  background-image: url(https://i.imgur.com/iSkgKNV.png);
+  background-size: cover;
+}
+
+.card4 {
+  height: 300px;
+  background-image: url(https://i.imgur.com/lcN3P5Y.png);
+  background-size: contain;
+}
+
+.cardtitle {
+   text-decoration: none;
+   
+}
+
+footer {
+ position: relative;
+  width: 100%;
+  height: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top:1px solid #ececec;
+}
+
+
+
+footer p:nth-child(1) {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+footer p:nth-child(2) {
+  font-size: 17px;
+  color: black;
+  width: 500px;  
+  text-align: center;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1d34e4;
+  border-radius: 50%;
+  margin: 22px 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  -webkit-transition: 0.15s all ease-in-out; 
+    -moz-transition: 0.15s all ease-in-out; 
+      -o-transition: 0.15s all ease-in-out; 
+         transition: 0.15s all ease-in-out;
+  border:1px solid transparent;
+}
+
+.social a:hover {
+  transform: scale(1.3);
+  transition: .3s;
+  color:#1d34e4;
+  background:#f8f8f8;
+  border:1px solid #1d34e4;
+}
+
+.end {
+  position: absolute;
+  color: black;
+  bottom: 35px;
+  font-size: 14px;
+}
+
+.righth > svg:first-of-type , .righth > svg:nth-of-type(2n) {
+    position: absolute;
+    align-self: center;
+}
+
+.righth > svg:nth-of-type(3n) {
+  transform: rotate(49deg);
+    bottom: -30px;
+    left: -25px;
+    position: relative;
+}
+  </style>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <div class="wrapper navcontainer">
+    <div class="nav">
+      <div class='logo'>
+        <h5>logo</h5>
+      </div>
+      <div class='menu'>
+        <a href=#>Home</a>
+        <a href=#>Services</a>
+        <a href=#>Products</a>
+        <a href=#>Contact</a>
+        <a href=#>LinkedIn+</a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-section light-gradient padding flexed" style="min-height:675px;position:relative;">
+    <div class="wrapper flexboxh">
+      <div class="lefth">
+        <div class="lefthcontainer">
+          <h2>Hello, My name is</h2>
+          <h1>James Ojeniyi</h1>
+          <div class="wrapper">
+            <div class="title">
+              <div class="i-title-item">UX/UI Designer</div>
+              <div class="i-title-item">Front End Developer</div>
+              <div class="i-title-item">AWS Cloud Practitioner</div>
+              <div class="i-title-item">Graphic Designer</div>
+            </div>
+
+          </div>
+          <p style="margin-top:4em;">
+            I design and develop services for customers of all sizes, specializing in creating stylish, modern websites,
+            web services and online stores.
+          </p>
+
+        </div>
+
+
+
+      </div>
+      <div class="righth flexed">
+        <a class="lightBtn">View Case Study</a>
+        <a class="darkBtn">View Case Study</a>
+        <svg style="z-index:22;" xmlns="http://www.w3.org/2000/svg" width="226.297" height="119.272"
+          viewBox="0 0 226.297 119.272">
+          <g id="layer1" transform="translate(-447.857 -443.594)">
+            <g id="g53688" transform="translate(447.857 443.594)">
+              <path id="path53690"
+                d="M-71.7-11.721a4.913,4.913,0,0,0-4.91-4.907,4.914,4.914,0,0,0-4.918,4.907V-1.4a4.918,4.918,0,0,0,4.918,4.923A4.917,4.917,0,0,0-71.7-1.4ZM-98.72-25.27a4.925,4.925,0,0,0-4.972-4.91,4.912,4.912,0,0,0-4.911,4.91V-1.4a4.913,4.913,0,0,0,4.911,4.923A4.926,4.926,0,0,0-98.72-1.4V-25.27Zm-27.072-18.535a4.909,4.909,0,0,0-4.91-4.908,4.91,4.91,0,0,0-4.911,4.908V8.411a4.912,4.912,0,0,0,4.911,4.923,4.912,4.912,0,0,0,4.91-4.923ZM-152.87-25.27a4.911,4.911,0,0,0-4.91-4.91,4.916,4.916,0,0,0-4.911,4.91V-1.4a4.917,4.917,0,0,0,4.911,4.923A4.912,4.912,0,0,0-152.87-1.4V-25.27Zm-27.072,13.548a4.9,4.9,0,0,0-4.895-4.907,4.921,4.921,0,0,0-4.926,4.907V-1.4a4.925,4.925,0,0,0,4.926,4.923A4.909,4.909,0,0,0-179.941-1.4V-11.721ZM-206.969-25.27a4.925,4.925,0,0,0-4.926-4.91,4.926,4.926,0,0,0-4.927,4.91V-1.4A4.926,4.926,0,0,0-211.9,3.525,4.926,4.926,0,0,0-206.969-1.4V-25.27Zm-27.059-18.535a4.923,4.923,0,0,0-4.927-4.908,4.923,4.923,0,0,0-4.926,4.908V8.411a4.925,4.925,0,0,0,4.926,4.923,4.925,4.925,0,0,0,4.927-4.923Zm-27.06,18.535a4.925,4.925,0,0,0-4.926-4.91,4.925,4.925,0,0,0-4.926,4.91V-1.4a4.925,4.925,0,0,0,4.926,4.923A4.925,4.925,0,0,0-261.089-1.4Zm-27.059,13.548a4.921,4.921,0,0,0-4.926-4.907A4.923,4.923,0,0,0-298-11.721V-1.4a4.927,4.927,0,0,0,4.926,4.923A4.925,4.925,0,0,0-288.148-1.4V-11.721Zm101.7,42.8a42.305,42.305,0,0,0-9.672-1.253c-9.146,0-14.653,4.939-14.653,12.293,0,6.51,4.607,9.757,10.135,11.5.613.2,1.516.485,2.117.684,2.461.774,4.425,1.925,4.425,3.917,0,2.228-2.27,3.671-7.206,3.671a37.189,37.189,0,0,1-9.371-1.461v9.049a59.273,59.273,0,0,0,10.709,1.074c7.594,0,16.28-3.318,16.28-13.2,0-4.791-2.933-9.2-9.374-11.249l-2.738-.872c-1.633-.515-4.549-1.35-4.549-3.744,0-1.891,2.16-3.223,6.138-3.223a34.04,34.04,0,0,1,7.757,1.2Zm83.857,19.113a10.17,10.17,0,0,1-10.263,10.35,10.162,10.162,0,0,1-10.258-10.35,10.161,10.161,0,0,1,10.258-10.34,10.169,10.169,0,0,1,10.263,10.34m-10.263-20.353c-12.094,0-20.768,9.122-20.768,20.353,0,11.249,8.674,20.365,20.768,20.365s20.779-9.116,20.779-20.365c0-11.231-8.686-20.353-20.779-20.353M-247.639,31.25a30.2,30.2,0,0,0-9.048-1.409c-12.075,0-20.94,8.61-20.94,20.353,0,12.669,9.785,20.365,20.94,20.365a31.478,31.478,0,0,0,9.048-1.4V58.6a17.4,17.4,0,0,1-8.336,2.087c-6.611,0-10.875-4.653-10.875-10.5,0-6.022,4.448-10.488,10.875-10.488a17.228,17.228,0,0,1,8.336,2.1Zm103.573,0a30.31,30.31,0,0,0-9.042-1.409c-12.093,0-20.958,8.61-20.958,20.353,0,12.669,9.8,20.365,20.958,20.365a31.7,31.7,0,0,0,9.042-1.4V58.6a17.521,17.521,0,0,1-8.349,2.087c-6.606,0-10.865-4.653-10.865-10.5,0-6.022,4.451-10.488,10.865-10.488a17.334,17.334,0,0,1,8.349,2.1Zm-80.01,38.609H-234V30.538h9.924Z"
+                transform="translate(298 48.713)" fill="#fff" />
+            </g>
+          </g>
+        </svg>
+        <svg style="z-index:2;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="656.863" height="575.694" viewBox="0 0 656.863 575.694">
+          <defs>
+            <clipPath id="clip-path">
+              <path id="Path_2" data-name="Path 2"
+                d="M696.651,558.369Q575.719,683.841,427.134,690.858T165.872,565.386Q53.194,432.9,153.077,278.534T435.8,115.916q182.842-8.255,282.312,154.363T696.651,558.369Z"
+                transform="translate(-106.142 -115.517)" />
+            </clipPath>
+          </defs>
+          <g id="magicpattern-blob-1663284591213" opacity="0.949" clip-path="url(#clip-path)">
+            <path id="Path_1" data-name="Path 1"
+              d="M696.651,558.369Q575.719,683.841,427.134,690.858T165.872,565.386Q53.194,432.9,153.077,278.534T435.8,115.916q182.842-8.255,282.312,154.363T696.651,558.369Z"
+              transform="translate(-106.142 -115.517)" fill="#1c33e3" />
+          </g>
+        </svg>
+        <div class="rotating">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="953.863"
+            height="872.694" viewBox="0 0 953.863 872.694">
+            <defs>
+              <filter id="Path_3" x="0" y="0" width="953.863" height="872.694" filterUnits="userSpaceOnUse">
+                <feOffset dy="33" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="49.5" result="blur" />
+                <feFlood flood-color="#1326be" flood-opacity="0.647" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_3)">
+              <path id="Path_3-2" data-name="Path 3"
+                d="M590.509,442.852Q469.577,568.324,320.992,575.341T59.73,449.869Q-52.947,317.38,46.935,163.017T329.659.4Q512.5-7.856,611.971,154.762T590.509,442.852Z"
+                transform="translate(148.5 115.5)" fill="#444cf7" />
+            </g>
+          </svg>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="wrapper padding">
+      <div class="services--boxes--container">
+        <div class="services--box fe-dev light">
+          <h2><i class="fa-solid fa-code"></i>Front-End Developer</h2>
+          <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices.
+            Secondly, it needs to be fast as possible. UI/UX Two things that will guarantee the best user experience:
+            looks and functionality. You want your website to be up to par in both departments. AWS Well-versed in
+            everything from data migration to hosting options for your business infrastructure on the cloud.</p>
+        </div>
+        <div class="services--box uiux-dev dark">
+          <h2><i class="fa-solid fa-code"></i>UI/UX Developer</h2>
+          <p>Two things that will guarantee the best user experience: looks and functionality. You want your website
+            to
+            be up to par in both departments.
+          </p>
+        </div>
+        <div class="services--box uiux-designer light">
+          <h2><i class="fa-solid fa-brush"></i>UI/UX Designer</h2>
+          <p>Two things that will guarantee the best user experience: looks and functionality. You want your website
+            to
+            be up to par in both departments.
+          </p>
+        </div>
+        <div class="services--box aws dark">
+          <h2><i class="fa-brands fa-aws"></i>AWS</h2>
+          <p>Well-versed in everything from data migration to hosting options for your business infrastructure on the
+            cloud.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAMES START WORKING IN HERE -->
+  <div class="row purple padding">
+    <div class="wrapper flexbox">
+      <div class="left">
+        <h2>About Me</h2>
+        <p>
+          I'm a UX/UI developer and designer interested in designing and coding the best user experience possible. To
+          me, UX/UI is more than just a career. It is the very thing that the current world functions on right now. I
+          am proficient in HTML, CSS, and Javascript. I started my IT journey working with Adobe Photoshop, creating
+          mockups and graphic art. My passions include design, coding, crypto, fashion, music.
+        </p>
+
+        <p>
+          I love the
+          brainstorming process and all the potential ideas that come to fruition. I also love the overall work
+          process in building user interfaces and user design. In addition to programming, I have experience as a
+          graphic designer. I work around the clock, but I do my best work from 6 am to 6 pm. For me personally, web
+          development is more of an art. I see myself and my team as artists creating an ever-evolving interface for
+          the world to function on.
+        </p>
+      </div>
+
+      <div class="right">
+        <img src="https://imgur.com/YZ2JTIy.png">
+      </div>
+    </div>
+  </div>
+
+  <div class='recentwork wrapper padding'>
+    <h3 style="color: #006CFF;">Recent Works</h3>
+    <div class='rw padding'>
+      <div class='cardcontainer'>
+        <div class='cardpreview1'>
+          <div class='card card1'>Cisco Mockup</div>
+          <a href="#" class="cardtitle">Cisco Mockup</a>
+        </div>
+        <div class='cardpreview2'>
+          <div class='card card2'>MIDI</div>
+          <a href="#" class="cardtitle">MIDI</a>
+        </div>
+        <div class='cardpreview3'>
+          <div class='card card3'>Cisco Mockup</div>
+          <a href="#" class="cardtitle">Cisco Mockup</a>
+        </div>
+        <div class='cardpreview4'>
+          <div class='card card4'>Cisco Mockup</div>
+          <a href="#" class="cardtitle">Cisco Mockup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>James Ojeniyi</p>
+    <p>For more HTML, CSS, and Javascript projects, email me at jamesojeniyi@gmail.com</p>
+    <div class='social'>
+      <a href='https://www.linkedin.com/jamesojeniyi'><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href='https://www.instagram.com/713sharpjim'><i class="fa-brands fa-instagram"></i></a>
+      <a href='https://www.facebook.com/jojeniyi'><i class="fa-brands fa-facebook-f"></i></a>
+      <a href='https://www.twitter.com/jojeniyi'><i class="fa-brands fa-twitter"></i></a>
+
+    </div>
+    <p class='end'>Copyright by James Ojeniyi</p>
+  </footer>
+  <!-- JAMES STOP WORKING FROM HERE -->
+
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
